@@ -1,0 +1,21 @@
+rules:
+  - id: environment-plugin-process-env
+    message: >
+      Passing process.env directly to EnvironmentPlugin exposes all environment
+      variables in the client bundle — including secrets, tokens, and internal
+      configuration. Pass only the specific variable names your application needs.
+    severity: ERROR
+    languages: [javascript, typescript]
+    metadata:
+      category: security
+      technology:
+        - webpack
+      cwe:
+        - "CWE-526: Cleartext Storage of Sensitive Information in an Environment Variable"
+      owasp:
+        - "A04:2025 - Cryptographic Failures"
+      confidence: HIGH
+      likelihood: HIGH
+      impact: HIGH
+    patterns:
+      - pattern: new webpack.EnvironmentPlugin(process.env)
