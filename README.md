@@ -1,5 +1,4 @@
-# bundlesec-webpack-opengrep
-![Test rules](https://github.com/tinkerscript/bundlesec-webpack-opengrep/actions/workflows/test.yml/badge.svg)
+![Test rules](https://github.com/bundlesec/webpack/actions/workflows/test.yml/badge.svg)
 
 Opengrep / Semgrep rules for auditing webpack configuration security.
 
